@@ -3,7 +3,7 @@ type BucketCardProps = {
   title: string;
   description: string;
   status: string;
-  rating: number;
+  rating: number | null;
   postcode: string;
 };
 

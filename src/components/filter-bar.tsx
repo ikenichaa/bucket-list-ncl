@@ -1,3 +1,14 @@
+import type { Dispatch, SetStateAction } from "react";
+
+type FilterBarProps = {
+  searchQuery: string;
+  setSearchQuery: Dispatch<SetStateAction<string>>;
+  statusFilter: string;
+  setStatusFilter: Dispatch<SetStateAction<string>>;
+  minRating: number;
+  setMinRating: Dispatch<SetStateAction<number>>;
+};
+
 const FilterBar = ({
   searchQuery,
   setSearchQuery,
@@ -5,7 +16,7 @@ const FilterBar = ({
   setStatusFilter,
   minRating,
   setMinRating,
-}) => {
+}: FilterBarProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-50 p-4 rounded-2xl mb-8 border border-gray-100">
       {/* Search Input */}
