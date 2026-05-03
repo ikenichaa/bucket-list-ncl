@@ -1,30 +1,20 @@
 import { useState } from "react";
-
-// Mock Sub-Components for each tab
-const Overview = () => (
-  <div className="p-4 bg-blue-50 rounded-lg">
-    This is the Overview component.
-  </div>
-);
-const Settings = () => (
-  <div className="p-4 bg-green-50 rounded-lg">
-    This is the Settings component.
-  </div>
-);
-const Profile = () => (
-  <div className="p-4 bg-purple-50 rounded-lg">
-    This is the Profile component.
-  </div>
-);
+import Cafe from "./tabs/cafe";
+import DineOut from "./tabs/dine-out";
+import Exercise from "./tabs/exercise";
+import Experience from "./tabs/experiences";
+import OutDoor from "./tabs/outdoor";
 
 const TabbedPage = () => {
-  const [activeTab, setActiveTab] = useState("overview");
+  const [activeTab, setActiveTab] = useState("cafe");
 
   // Define your tabs configuration
   const tabs = [
-    { id: "overview", label: "Overview", component: <Overview /> },
-    { id: "profile", label: "Profile", component: <Profile /> },
-    { id: "settings", label: "Settings", component: <Settings /> },
+    { id: "cafe", label: "Cafe", component: <Cafe /> },
+    { id: "dine-out", label: "Dine out", component: <DineOut /> },
+    { id: "exercise", label: "Exercise", component: <Exercise /> },
+    { id: "experience", label: "Experience", component: <Experience /> },
+    { id: "outdoor", label: "Outdoor", component: <OutDoor /> },
   ];
 
   return (
