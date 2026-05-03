@@ -18,15 +18,25 @@ const TabbedPage = () => {
   ];
 
   return (
-    <div className="w-full mx-auto">
-      {/* Page Title */}
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">
-        {" "}
-        Places to visit in Newcastle{" "}
-      </h1>
+    <div className="tabbed-page w-full mx-auto">
+      <header className="destination-hero">
+        <div className="destination-hero__content">
+          <span className="destination-hero__eyebrow">Newcastle bucket list</span>
+          <h1>Eat, explore, and unwind around Newcastle</h1>
+          <p>
+            A curated shortlist of cafes, dining spots, outdoor escapes, and
+            weekend experiences worth saving.
+          </p>
+          <div className="destination-hero__meta" aria-label="Guide highlights">
+            <span>5 categories</span>
+            <span>Local favourites</span>
+            <span>Easy weekend planning</span>
+          </div>
+        </div>
+      </header>
 
       {/* Tabs Navigation */}
-      <div className="flex border-b border-gray-200 mb-6">
+      <div className="tabs-nav flex border-b border-gray-200 mb-6">
         {tabs.map((tab) => (
           <button
             key={tab.id}

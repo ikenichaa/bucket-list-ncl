@@ -18,7 +18,7 @@ export const CAFE_PLACES = [
   {
     title: "Cafe Mercy",
     image:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800", // Representative Mediterranean chic image
+      "https://lh3.googleusercontent.com/p/AF1QipN3GkwEDvoFiJVLN-2pu_5tXbw4b18BUKvA9E2G=s1360-w1360-h1020-rw", // Representative Mediterranean chic image
     tags: ["Grey Street", "Spritz", "Mediterranean"],
     description:
       "Mother Mercy's sister venue on Grey Street. It brings a chic Ibiza/Mediterranean vibe to Newcastle with a focus on signature Spritzes and charcuterie.",

@@ -17,6 +17,94 @@
   }
 }
 
+.tabbed-page {
+  padding: 28px 32px 48px;
+}
+
+.destination-hero {
+  min-height: 340px;
+  margin: 0 0 28px;
+  padding: 44px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  border-radius: 8px;
+  background-image:
+    linear-gradient(90deg, rgba(10, 18, 32, 0.88), rgba(10, 18, 32, 0.54) 52%, rgba(10, 18, 32, 0.16)),
+    url("../img.png");
+  background-size: cover;
+  background-position: center 36%;
+  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.18);
+}
+
+.destination-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 18, 32, 0.44), transparent 42%);
+  pointer-events: none;
+}
+
+.destination-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+}
+
+.destination-hero__eyebrow {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #dbeafe;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.destination-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.destination-hero p {
+  max-width: 600px;
+  margin-top: 18px;
+  color: #e5eefb;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.destination-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.destination-hero__meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 13px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+}
+
+.tabs-nav {
+  justify-content: center;
+}
+
 .hero {
   position: relative;
 
@@ -53,6 +141,34 @@
     width: auto;
     transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
       scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .tabbed-page {
+    padding: 16px 14px 32px;
+  }
+
+  .destination-hero {
+    min-height: 430px;
+    padding: 28px 22px;
+    background-image:
+      linear-gradient(0deg, rgba(10, 18, 32, 0.9), rgba(10, 18, 32, 0.42) 70%),
+      url("../img.png");
+    background-position: center top;
+  }
+
+  .destination-hero h1 {
+    font-size: 42px;
+  }
+
+  .destination-hero p {
+    font-size: 16px;
+  }
+
+  .tabs-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
   }
 }
 

@@ -1,4 +1,11 @@
-const BucketCard = ({ image, title, description, tags }) => {
+type BucketCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  tags: string[];
+};
+
+const BucketCard = ({ image, title, description, tags }: BucketCardProps) => {
   return (
     <div className="group overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100">
       {/* Photo Section */}
