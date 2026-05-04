@@ -1,10 +1,12 @@
 import type { Dispatch, SetStateAction } from "react";
 
+export type Status = "All" | "New" | "Want to Go" | "Been There";
+
 type FilterBarProps = {
   searchQuery: string;
   setSearchQuery: Dispatch<SetStateAction<string>>;
-  statusFilter: string;
-  setStatusFilter: Dispatch<SetStateAction<string>>;
+  statusFilter: Status;
+  setStatusFilter: Dispatch<SetStateAction<Status>>;
   minRating: number;
   setMinRating: Dispatch<SetStateAction<number>>;
 };
@@ -41,11 +43,12 @@ const FilterBar = ({
         <select
           value={statusFilter}
           className="w-full p-2.5 bg-white border border-gray-200 rounded-xl outline-none cursor-pointer"
-          onChange={(e) => setStatusFilter(e.target.value)}
+          onChange={(e) => setStatusFilter(e.target.value as Status)}
         >
-          <option value="all">Everything</option>
+          <option value="All">Everything</option>
           <option value="Been There">Been There</option>
           <option value="Want to Go">Want to Go</option>
+          <option value="New">New</option>
         </select>
       </div>
 
@@ -60,7 +63,7 @@ const FilterBar = ({
             statusFilter === "Want to Go" ? "opacity-30" : "opacity-100"
           }`}
           onChange={(e) => setMinRating(Number(e.target.value))}
-          disabled={statusFilter === "Want to Go"}
+          disabled={statusFilter === "Want to Go" || statusFilter === "New"}
         >
           <option value="0">Any Rating</option>
           <option value="5">5 Stars only</option>

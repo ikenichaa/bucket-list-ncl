@@ -4,21 +4,32 @@ export const CAFE_PLACES = [
     title: "Flower Cafe",
     postcode: "NE1 5AF",
     status: "Want to Go",
-    rating: null, // No rating yet because we haven't been
+    rating: null,
     image:
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEc6RPHMfLPFLHLHTZiC7lUxFtA1-WyAIMKSsYvTJcvvlfxmbzzCxlJ6eaGGvkjoiXVOJDSoMGlZL51Hux2haIzM1KCkUA_MrZV78HyebRIHvQ6Mc4TvkmastBrR-TiEmzgE3Nzjq2gDBv9=s1360-w1360-h1020-rw",
     description:
-      "Famous for its massive floral installations and pink aesthetic on Grainger Street.",
+      "A highly photogenic spot on Grainger Street famous for its vibrant floral ceiling, pink decor, and excellent selection of coffee, cocktails, and gelato.",
   },
   {
     id: 2,
-    title: "Mother Mercy",
-    postcode: "NE1 1EE",
-    status: "Been There",
-    rating: 5,
+    title: "Kiln",
+    postcode: "NE6 1LN",
+    status: "Want to Go",
+    rating: null,
     image:
-      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdIi_M8qnNoYKNgG1NcyFTEspyHgzAqDXHz46HPqIrIknpx2JK-fMVutzSs9j9X6rz_K8Uua1OR4q-_cKFVySsYmSjtuqeSzrnRaAijRS5sKMH9Eerx7e7CwFA0Ko_ftwH9Qo4Gg=s1360-w1360-h1020-rw",
     description:
-      "An underground basement bar voted one of the Top 50 Cocktail Bars in the UK.",
+      "A unique Mediterranean-style kitchen and pottery workshop in Ouseburn. You can watch potters at work while enjoying handmade seasonal dishes and specialty coffee.",
+  },
+  {
+    id: 3,
+    title: "Local",
+    postcode: "NE2 2DJ",
+    status: "Want to Go",
+    rating: null,
+    image:
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGH5MhJpw4vV3jW01bnk4Kg_WatmYkYaTSWkqe1NPBiecxFpI_Bric7FOpvlLXQUR-mYEP-b2kgKI3cqufz1LUxfkc0AE3i00IBPWoS71HZk3mCb8e_0dTYmW7BQiofT1qW6doVSzuEkR39=s1360-w1360-h1020-rw",
+    description:
+      "A neighborhood favorite in Jesmond known for its minimalist aesthetic, incredible pastries from local bakers, and top-tier North East roasted coffee.",
   },
 ];

@@ -16,6 +16,7 @@ const BucketCard = ({
   postcode,
 }: BucketCardProps) => {
   const isVisited = status === "Been There";
+  const isNew = status === "New";
 
   return (
     <div className="group overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-all border border-gray-100">
@@ -27,7 +28,9 @@ const BucketCard = ({
           className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold shadow-sm ${
             isVisited
               ? "bg-green-100 text-green-700"
-              : "bg-amber-100 text-amber-700"
+              : isNew
+                ? "bg-blue-100 text-blue-700"
+                : "bg-amber-100 text-amber-700"
           }`}
         >
           {status}

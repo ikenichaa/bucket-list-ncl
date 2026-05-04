@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { EXERCISE_PLACES } from "../data/excercise.ts";
+import { RESTAURANT_PLACES } from "../data/restaurant.ts";
 import BucketCard from "../components/bucket-card.tsx";
 import FilterBar from "../components/filter-bar.tsx";
 import type { Status } from "../components/filter-bar.tsx";
 
-const Exercise = () => {
+const Restaurant = () => {
   // 1. Local state for filters
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<Status>("All");
   const [minRating, setMinRating] = useState(0);
 
   // 2. Logic (Same as before, but using our state)
-  const filteredPlaces = EXERCISE_PLACES.filter((place) => {
+  const filteredPlaces = RESTAURANT_PLACES.filter((place) => {
     const matchesSearch =
       place.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       place.postcode.toLowerCase().includes(searchQuery.toLowerCase());
@@ -45,4 +45,4 @@ const Exercise = () => {
   );
 };
 
-export default Exercise;
+export default Restaurant;
