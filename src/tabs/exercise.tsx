@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CAFE_PLACES } from "../data/cafe.ts";
+import { EXERCISE_PLACES } from "../data/excercise.ts";
 import BucketCard from "../components/bucket-card.tsx";
 import FilterBar from "../components/filter-bar.tsx";
 import type { Status } from "../components/filter-bar.tsx";
@@ -11,7 +11,7 @@ const Exercise = () => {
   const [minRating, setMinRating] = useState(0);
 
   // 2. Logic (Same as before, but using our state)
-  const filteredPlaces = CAFE_PLACES.filter((place) => {
+  const filteredPlaces = EXERCISE_PLACES.filter((place) => {
     const matchesSearch =
       place.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       place.postcode.toLowerCase().includes(searchQuery.toLowerCase());
