@@ -1,6 +1,7 @@
 # Newcastle Bucket List
 
 A minimalist React application to track and discover the best spots in Newcastle upon Tyne. Organized by category, this app allows you to filter by area (postcode), track your progress (Been There vs. Want to Go), and see ratings for your favorite local gems.
+![App preview](./web-example.png)
 
 # Tech Stack
 
