@@ -2,11 +2,12 @@ import { useState } from "react";
 import { CAFE_PLACES } from "../data/cafe.ts";
 import BucketCard from "../components/bucket-card";
 import FilterBar from "../components/filter-bar";
+import type { Status } from "../components/filter-bar";
 
 const Cafe = () => {
   // 1. Local state for filters
   const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState("all");
+  const [statusFilter, setStatusFilter] = useState<Status>("All");
   const [minRating, setMinRating] = useState(0);
 
   // 2. Logic (Same as before, but using our state)
@@ -16,7 +17,7 @@ const Cafe = () => {
       place.postcode.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesStatus =
-      statusFilter === "all" || place.status === statusFilter;
+      statusFilter === "All" || place.status === statusFilter;
     const matchesRating = (place.rating || 0) >= minRating;
 
     return matchesSearch && matchesStatus && matchesRating;

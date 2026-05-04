@@ -4,7 +4,7 @@ import BucketCard from "../components/bucket-card.tsx";
 import FilterBar from "../components/filter-bar.tsx";
 import type { Status } from "../components/filter-bar.tsx";
 
-const Exercise = () => {
+const Restaurant = () => {
   // 1. Local state for filters
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<Status>("All");
@@ -45,4 +45,4 @@ const Exercise = () => {
   );
 };
 
-export default Exercise;
+export default Restaurant;
